@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/i686-w64-mingw32/lib
+sharedlibdir=/usr/i686-w64-mingw32/lib
+includedir=/usr/i686-w64-mingw32/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

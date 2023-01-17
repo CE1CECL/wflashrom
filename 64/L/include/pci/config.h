@@ -1,0 +1,11 @@
+#define PCI_CONFIG_H
+#define PCI_ARCH_WINDOWS
+#define PCI_OS_WINDOWS
+#define PCI_HAVE_64BIT_ADDRESS
+#define PCI_HAVE_PM_WIN32_CFGMGR32
+#define PCI_HAVE_PM_WIN32_SYSDBG
+#define PCI_HAVE_PM_DUMP
+#define PCI_COMPRESSED_IDS
+#define PCI_IDS "pci.ids.gz"
+#define PCI_PATH_IDS_DIR "/64/L//share"
+#define PCILIB_VERSION "3.8.0"

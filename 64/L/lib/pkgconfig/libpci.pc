@@ -1,0 +1,11 @@
+prefix=/64/L/
+includedir=/64/L//include
+libdir=/64/L//lib
+idsdir=/64/L//share
+
+Name: libpci
+Description: libpci
+Version: 3.8.0
+Libs: -L${libdir} -lpci
+Libs.private: -lcfgmgr32 -lz -lcfgmgr32 -lz
+Cflags: -I${includedir}

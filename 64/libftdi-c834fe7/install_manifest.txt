@@ -1,0 +1,12 @@
+/64/L/lib/pkgconfig/libftdi1.pc
+/64/L/lib/pkgconfig/libftdipp1.pc
+/64/L/bin/libftdi1-config
+/64/L/lib/cmake/libftdi1/LibFTDI1Config.cmake
+/64/L/lib/cmake/libftdi1/LibFTDI1ConfigVersion.cmake
+/64/L/lib/cmake/libftdi1/UseLibFTDI1.cmake
+/64/L/lib/libftdi1.dll.a
+/64/L/bin/libftdi1.dll
+/64/L/lib/libftdi1.a
+/64/L/include/libftdi1/ftdi.h
+/64/L/bin/ftdi_eeprom.exe
+/64/L/share/doc/libftdi1/example.conf

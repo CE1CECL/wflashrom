@@ -1,0 +1,11 @@
+prefix=/16/L/
+includedir=/16/L//include
+libdir=/16/L//lib
+idsdir=/16/L//share
+
+Name: libpci
+Description: libpci
+Version: 3.8.0
+Libs: -L${libdir} -lpci
+Libs.private:  
+Cflags: -I${includedir}

@@ -1,0 +1,131 @@
+Build started on Tue Jan 17 10:20:44 AM EST 2023
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror   Makefile.d/cc_test.c -o /dev/null && echo yes || echo no ; }
+yes
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --modversion  libftdi1 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --cflags  libftdi1 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --libs --static  libftdi1 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --modversion  libjaylink 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --cflags  libjaylink 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --libs --static  libjaylink 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --modversion  libusb-1.0 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --cflags  libusb-1.0 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --libs --static  libusb-1.0 2>/dev/null ; }
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --modversion  libpci 2>/dev/null ; }
+3.8.0
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --cflags  libpci 2>/dev/null ; }
+-I/16/L/include 
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --libs --static  libpci 2>/dev/null ; }
+-L/16/L/lib -lpci 
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -E  Makefile.d/os_test.h | tail -1 | tr -d '"' ; }
+DOS
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -E  Makefile.d/arch_test.h | tail -1 | tr -d '"' ; }
+x86
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -E  Makefile.d/endian_test.h | tail -1 | tr -d '"' ; }
+little
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --exists  libftdi1 && echo yes || echo no ; }
+no
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --exists  libjaylink && echo yes || echo no ; }
+no
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --exists  libusb-1.0 && echo yes || echo no ; }
+no
+
+exec: export LC_ALL=C ; {  PKG_CONFIG_LIBDIR=../L//lib/pkgconfig pkg-config --exists  libpci && echo yes || echo no ; }
+yes
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror  -I/16/L/include   Makefile.d/pci_old_get_dev_test.c -o /dev/null && echo yes || echo no ; }
+Makefile.d/pci_old_get_dev_test.c: In function 'main':
+Makefile.d/pci_old_get_dev_test.c:15:15: error: too few arguments to function 'pci_get_dev'
+   15 |         dev = pci_get_dev(pacc, dev->bus, dev->dev, 1);
+      |               ^~~~~~~~~~~
+In file included from Makefile.d/pci_old_get_dev_test.c:4:
+/16/L/include/pci/pci.h:96:17: note: declared here
+   96 | struct pci_dev *pci_get_dev(struct pci_access *acc, int domain, int bus, int dev, int func) PCI_ABI; /* Raw access to specified device */
+      |                 ^~~~~~~~~~~
+no
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror    Makefile.d/ft232h_test.c -o /dev/null && echo yes || echo no ; }
+Makefile.d/ft232h_test.c:1:10: fatal error: ftdi.h: No such file or directory
+    1 | #include <ftdi.h>
+      |          ^~~~~~~~
+compilation terminated.
+no
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror   Makefile.d/utsname_test.c -o /dev/null && echo yes || echo no ; }
+yes
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror   Makefile.d/clock_gettime_test.c -o /dev/null && echo yes || echo no ; }
+Makefile.d/clock_gettime_test.c: In function 'main':
+Makefile.d/clock_gettime_test.c:6:25: error: storage size of 'res' isn't known
+    6 |         struct timespec res;
+      |                         ^~~
+Makefile.d/clock_gettime_test.c:7:9: error: implicit declaration of function 'clock_gettime' [-Werror=implicit-function-declaration]
+    7 |         clock_gettime(CLOCK_REALTIME, &res);
+      |         ^~~~~~~~~~~~~
+Makefile.d/clock_gettime_test.c:7:23: error: 'CLOCK_REALTIME' undeclared (first use in this function)
+    7 |         clock_gettime(CLOCK_REALTIME, &res);
+      |                       ^~~~~~~~~~~~~~
+Makefile.d/clock_gettime_test.c:7:23: note: each undeclared identifier is reported only once for each function it appears in
+Makefile.d/clock_gettime_test.c:6:25: error: unused variable 'res' [-Werror=unused-variable]
+    6 |         struct timespec res;
+      |                         ^~~
+cc1: all warnings being treated as errors
+no
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -Wall -Werror    Makefile.d/clock_gettime_test.c  -lrt -o /dev/null && echo yes || echo no ; }
+Makefile.d/clock_gettime_test.c: In function 'main':
+Makefile.d/clock_gettime_test.c:6:25: error: storage size of 'res' isn't known
+    6 |         struct timespec res;
+      |                         ^~~
+Makefile.d/clock_gettime_test.c:7:9: error: implicit declaration of function 'clock_gettime' [-Werror=implicit-function-declaration]
+    7 |         clock_gettime(CLOCK_REALTIME, &res);
+      |         ^~~~~~~~~~~~~
+Makefile.d/clock_gettime_test.c:7:23: error: 'CLOCK_REALTIME' undeclared (first use in this function)
+    7 |         clock_gettime(CLOCK_REALTIME, &res);
+      |                       ^~~~~~~~~~~~~~
+Makefile.d/clock_gettime_test.c:7:23: note: each undeclared identifier is reported only once for each function it appears in
+Makefile.d/clock_gettime_test.c:6:25: error: unused variable 'res' [-Werror=unused-variable]
+    6 |         struct timespec res;
+      |                         ^~~
+cc1: all warnings being treated as errors
+no
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror   Makefile.d/linux_mtd_test.c -o /dev/null && echo yes || echo no ; }
+Makefile.d/linux_mtd_test.c:1:10: fatal error: mtd/mtd-user.h: No such file or directory
+    1 | #include <mtd/mtd-user.h>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+no
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror   Makefile.d/linux_spi_test.c -o /dev/null && echo yes || echo no ; }
+Makefile.d/linux_spi_test.c:1:10: fatal error: linux/types.h: No such file or directory
+    1 | #include <linux/types.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+no
+
+exec: export LC_ALL=C ; {  /usr/bin/i586-pc-msdosdjgpp-gcc -c -Wall -Werror   Makefile.d/linux_i2c_test.c -o /dev/null && echo yes || echo no ; }
+Makefile.d/linux_i2c_test.c:1:10: fatal error: linux/i2c-dev.h: No such file or directory
+    1 | #include <linux/i2c-dev.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+no
+

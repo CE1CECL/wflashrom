@@ -1,0 +1,11 @@
+prefix=/64/L
+exec_prefix=/64/L/bin
+libdir=/64/L/bin
+includedir=/64/L/include/libftdi1
+
+Name: libftdipp1
+Description: C++ wrapper for libftdi1
+Requires: libftdi1
+Version: 1.4
+Libs: -L${libdir} -lftdipp1
+Cflags: -I${includedir}

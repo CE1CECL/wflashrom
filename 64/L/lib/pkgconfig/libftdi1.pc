@@ -1,0 +1,11 @@
+prefix=/64/L
+exec_prefix=/64/L/bin
+libdir=/64/L/bin
+includedir=/64/L/include/libftdi1
+
+Name: libftdi1
+Description: Library to program and control the FTDI USB controller
+Requires: libusb-1.0
+Version: 1.4
+Libs: -L${libdir} -lftdi1
+Cflags: -I${includedir}
